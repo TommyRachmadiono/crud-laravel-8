@@ -1,0 +1,18 @@
+<nav class="navbar navbar-expand-lg navbar-light bg-light">
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup"
+        aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+        <div class="navbar-nav mx-auto">
+            <a class="nav-item nav-link {{ (request()->segment(1) == '') ? 'active' : '' }}"
+                href="{{ url('/') }}">Home</a>
+            <a class="nav-item nav-link {{ (request()->segment(1) == 'product') ? 'active' : '' }}"
+                href="{{ route('product.index') }}">Product</a>
+            <a class="nav-item nav-link {{ (request()->segment(1) == 'order') ? 'active' : '' }}"
+                href="{{ route('order.index') }}">Order</a>
+            <a class="nav-item nav-link {{ (request()->segment(1) == 'history') ? 'active' : '' }}"
+                href="{{ route('history') }}">History</a>
+        </div>
+    </div>
+</nav>
